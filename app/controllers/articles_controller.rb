@@ -5,6 +5,9 @@ def index
 end
 def show
     @articles=Article.find(params[:id])
+    @comment = Coment.new
+    @comment.article_id = @articles.id
+    
 end
 def new 
     @articles=Article.new
