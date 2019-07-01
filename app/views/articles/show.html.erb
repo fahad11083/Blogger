@@ -1,4 +1,8 @@
 <h1> <%=@articles.title %> </h1>
 <p><%=@articles.body %> </p>
+<%= link_to "delete", article_path, method: :delete %>
 <%= link_to "<< Back to previous Page",articles_path %>
+<br />
+<%= link_to "edit", edit_article_path(@articles) %>
+
 
