@@ -1,4 +1,10 @@
 <h1> <%=@articles.title %> </h1>
+<p>
+  Tags:
+  <% @articles.tags.each do |tag| %>
+    <%= link_to tag.name, tag_path(tag) %>
+  <% end %>
+</p>
 <p><%=@articles.body %> </p>
 <%= link_to "delete", article_path, method: :delete %>
 <br />
