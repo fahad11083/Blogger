@@ -5,6 +5,13 @@
     <%= link_to tag.name, tag_path(tag) %>
   <% end %>
 </p>
+<p>
+     
+     <% if @articles.image.exists? %>
+     <%= image_tag @articles.image.url(:medium) %>
+ <% end %>
+</p>
+
 <p><%=@articles.body %> </p>
 <%= link_to "delete", article_path, method: :delete %>
 <br />
